@@ -100,14 +100,14 @@ span:active,
 }
 
 @media (pointer: coarse) {
-  span:hover {
+  span:active {
     background: #ffe3db;
     box-shadow: none;
   }
 }
 
 @media (pointer: fine) {
-  span:hover {
+  span:active {
     background: #ffe3db;
     box-shadow: none;
   }
