@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nums.length = 0;
         opKey.length = 0;
         screen.textContent = "0";
-        flagForPercentage = false
+        flagForPercentage = false;
       }
 
       //calculation take place if nums have 2 values
