@@ -83,8 +83,6 @@ span {
     box-shadow: inset 0px 0px 0px 2px black;
 }
 
-
-
 span:active,
 .func:active{
     opacity: 0.2;
@@ -112,9 +110,9 @@ span:active,
 
 /* on mobile */
 @media (pointer: coarse) {
-  span:active,
-  .func:active {
-    opacity: 0.2;
+ span:hover {
+    background: #ffe3db;
+    box-shadow: none;
   }
 }
 
