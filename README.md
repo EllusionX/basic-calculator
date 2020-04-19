@@ -1,6 +1,6 @@
 # Basic Calculator
 
-A basic calculator application made with Javascript. 
+A basic calculator application made with JavaScript. 
 
 ## About
-This is my first Javascript project to practice my understanding with the language. 
+This is my first JavaScript project to practice my understanding with the language. 
