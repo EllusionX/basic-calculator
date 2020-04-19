@@ -83,11 +83,6 @@ span {
     box-shadow: inset 0px 0px 0px 2px black;
 }
 
-span:hover {
-  background: #ffe3db;
-  box-shadow: none;
-}
-
 
 span:active,
 .func:active{
@@ -102,6 +97,20 @@ span:active,
 .equal {
     background: #B5B5B5;
     color: #592E59;
+}
+
+@media (pointer: coarse) {
+  span:hover {
+    background: #ffe3db;
+    box-shadow: none;
+  }
+}
+
+@media (pointer: fine) {
+  span:hover {
+    background: #ffe3db;
+    box-shadow: none;
+  }
 }
 
 /* other mobile styles and orientation */
