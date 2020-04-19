@@ -102,12 +102,21 @@ span:active,
 
 
 
+/* not on mobile */
 @media (pointer: fine) {
-    span:hover {
-        background: #FFE3DB;
-        box-shadow: none;
-    }
+  span:hover {
+    background: #ffe3db;
+    box-shadow: none;
   }
+}
+
+/* on mobile */
+@media (pointer: coarse) {
+  span:active,
+  .func:active {
+    opacity: 0.2;
+  }
+}
 
 
 /* other mobile styles and orientation */
@@ -116,9 +125,6 @@ span:active,
         display: none;
     }
 }
-
-
-
 
 @media only screen and (min-width: 360px){
    
