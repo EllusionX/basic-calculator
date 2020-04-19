@@ -98,20 +98,18 @@ span:active,
     color: #592E59;
 }
 
-/* not on mobile */
-@media (pointer: fine) {
+@media (pointer: coarse) {
   span:hover {
     background: #ffe3db;
     box-shadow: none;
   }
 }
 
-/* on mobile */
-@media (pointer: coarse) {
-    span:hover {
-        background: #ffe3db;
-        box-shadow: none;
-      }
+@media (pointer: fine) {
+  span:hover {
+    background: #ffe3db;
+    box-shadow: none;
+  }
 }
 
 /* other mobile styles and orientation */
