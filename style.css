@@ -83,10 +83,7 @@ span {
     box-shadow: inset 0px 0px 0px 2px black;
 }
 
-span:hover {
-    background: #FFE3DB;
-    box-shadow: none;
-}
+
 
 span:active,
 .func:active{
@@ -105,25 +102,104 @@ span:active,
 
 
 
-/* styles mode */
-@media only screen and (min-width: 400px){
+@media (pointer: fine) {
+    span:hover {
+        background: #FFE3DB;
+        box-shadow: none;
+    }
+  }
+
+
+/* other mobile styles and orientation */
+@media only screen and (orientation: landscape) {
+    .title {
+        display: none;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 360px){
    
     .keypad {
         margin: 7% auto;
     }
 
     span {
-        padding: 10px;
+        padding: 17px 0;
         font-size: 2.5em;
     }
 }
 
-@media only screen and (min-width: 730px){
+@media only screen and (min-width: 400px) and (orientation: landscape) {
+   
+    .screen {
+        height: 60px;
+    }
+    .keypad {
+        margin: 2% auto;
+    }
+
+    span {
+        padding: 2px 0;
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 400px) and  (min-height: 730px) {
+    span {
+        padding: 25px 0;
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 730px) and  (min-height: 400px) and (orientation: landscape) {
+    span {
+        padding: 6px 0;
+        font-size: 2.5em;
+    }
+}
+
+
+@media only screen and (min-width: 400px) and  (min-height: 823px) {
+    .screen {
+        height: 180px;
+    }
+
+    .screen p {
+        font-size: 2.7em;
+    }
+
+    span {
+        padding: 25px 0;
+        font-size: 2.7em;
+    }
+}
+
+@media only screen and (min-width: 375px) and  (min-height: 812px) {
+    
+    .screen {
+        height: 180px;
+    }
+
+    span {
+        padding: 25px 0;
+        font-size: 2.7em;
+    }
+}
+
+
+@media only screen and (min-width: 768px)
+and (min-height: 1024px) {
     .container {
         max-width: 540px;
         max-height: 700px;
         margin: 0 auto;
-        
+    }
+
+    .keypad {
+        margin: 3% auto;
     }
 
     .title h3 {
@@ -131,35 +207,45 @@ span:active,
     }
 }
 
+@media only screen and (min-width: 1024px)
+and (min-height: 768px) and (orientation: landscape) {
+    .container {
+        max-width: 540px;
+        max-height: 700px;
+        margin: 0 auto;
+    }
+    
+    .title {
+        display: block;
+    }
+    
+    .title h3 {
+        font-size: 3em;
+    }
 
-@media only screen and (min-height: 640px){
-    .keypad {
-        margin: 7% auto;
+    .screen {
+        height: 150px;
     }
 
     span {
-        padding: 15px;
-        font-size: 2.5em;
+        padding: 15px 0;
+        font-size: 2.7em;
     }
 }
 
-@media only screen and (min-height: 730px){
-    .keypad {
-        margin: 7% auto;
+@media only screen and (min-width: 800px) {
+    .container {
+        max-width: 540px;
+        max-height: 700px;
+        margin: 0 auto;
     }
 
-    span {
-        padding: 20px;
-    }
-}
-
-@media only screen and (min-height: 730px){
-    .keypad {
-        margin: 7% auto;
+    .title {
+        display: block;
     }
 
-    span {
-        padding: 20px;
+    .title h3 {
+        font-size: 3.2em;
     }
 }
 

@@ -24,10 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
           updateNumsArray(result, nums);
           opKey[0] = action;
           screen.textContent = result;
+        } else if (nums[0].includes("%")){
+          nums[0] = nums[0].replace(/%/g, "") / 100;
+          screen.textContent = nums[0];
         }
-       
+
         flagForEqual = true;
-        //console.log(nums, opKey);
+        console.log(nums, opKey);
       }
 
       //clear / setup display
@@ -59,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (screen.textContent.includes("%")) {
           screen.textContent = screen.textContent.replace(/%/g, "");
         } else {
-          let value = parseInt(screen.textContent) / 100;
-          screen.textContent = value.toString();
+          screen.textContent += "%";
         }
       }
 
@@ -104,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const calculate = (numArray, operator) => {
+    numArray = checkPercentage(numArray);
     switch (operator) {
       case "add":
         return parseFloat(numArray[0]) + parseFloat(numArray[1]);
@@ -121,5 +124,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("it broke the values are: " + operator);
     }
   };
-  
+
+  const checkPercentage = (numArray) => {
+    numArray.forEach((element, index, editArray) => {
+      console.log("type of element: " + typeof element);
+      if (element.includes("%")) {
+        editArray[index] = element.replace(/%/g, "") / 100;
+        editArray[index]  = parseFloat(editArray[0]) * parseFloat(numArray[1]);
+      }
+    });
+    return numArray;
+  };
+
+
 }); // end of DOM
