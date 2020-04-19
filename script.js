@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nums = new Array();   //input numbers
   var opKey = new Array();    //input operator keys
   var flagForEqual = false;   //check if equal is press
+  var flagForPercentage = false; //check if percentage is press
 
   keypad.addEventListener("click", (e) => {
     if (e.target.matches("span")) {
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       //clear / setup display
-      if (!action) {
+      if (!action && !flagForPercentage) {
         if (
           displayNum === "0" ||
           calculator.dataset.operatorPress === "true" ||
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (action === "dot") {
-        if (!screen.textContent.includes(".")) {
+        if (!screen.textContent.includes(".") && !screen.textContent.includes("%")) {
           screen.textContent += ".";
         }
       }
@@ -61,8 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (action === "percentage") {
         if (screen.textContent.includes("%")) {
           screen.textContent = screen.textContent.replace(/%/g, "");
+          flagForPercentage = false;
         } else {
           screen.textContent += "%";
+          flagForPercentage = true;
         }
       }
 
@@ -84,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         calculator.dataset.operatorPress = "true";
         console.log("nums: " + nums + " -- opKey: " + opKey);
         flagForEqual = false;
+        flagForPercentage =false;
       } else if (action === "clear") {
         nums.length = 0;
         opKey.length = 0;
