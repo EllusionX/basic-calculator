@@ -110,12 +110,10 @@ span:active,
 
 /* on mobile */
 @media (pointer: coarse) {
- span:hover {
-    background: #ffe3db;
-    box-shadow: none;
+  span {
+      background: orange;
   }
 }
-
 
 /* other mobile styles and orientation */
 @media only screen and (orientation: landscape) {
