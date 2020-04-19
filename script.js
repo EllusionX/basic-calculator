@@ -26,11 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
           opKey[0] = action;
           screen.textContent = result;
         } else if (nums[0].includes("%")){
-          nums[0] = nums[0].replace(/%/g, "") / 100;
+          let tempNum = parseInt(nums[0].replace(/%/g, "")) / 100;
+          nums[0] = tempNum.toString();
           screen.textContent = nums[0];
         }
 
         flagForEqual = true;
+        flagForPercentage = false
         console.log(nums, opKey);
       }
 
