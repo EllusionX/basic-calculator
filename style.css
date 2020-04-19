@@ -98,13 +98,6 @@ span:active,
     color: #592E59;
 }
 
-@media (pointer: coarse) {
-  span:hover {
-    background: #ffe3db;
-    box-shadow: none;
-  }
-}
-
 @media (pointer: fine) {
   span:hover {
     background: #ffe3db;
