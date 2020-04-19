@@ -100,21 +100,6 @@ span:active,
 
 
 
-/* not on mobile */
-@media (pointer: fine) {
-  span:hover {
-    background: #ffe3db;
-    box-shadow: none;
-  }
-}
-
-/* on mobile */
-@media (pointer: coarse) {
-  span {
-      background: orange;
-  }
-}
-
 /* other mobile styles and orientation */
 @media only screen and (orientation: landscape) {
     .title {
